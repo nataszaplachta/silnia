@@ -13,7 +13,7 @@ namespace Silnia
             Console.WriteLine("Podaj liczbę");
             int n = Int32.Parse(Console.ReadLine());
 
-            //silnia iteracyjnie
+            //silnia rekurencyjnie
 
             int silnia1(int i)
             {
@@ -24,7 +24,17 @@ namespace Silnia
 
             }
 
-            
+            //silnia iteracyjnie
+            int silnia2(int a)
+            {
+                int result = 1;
+                for (int i = 1; i <= a; i++)
+                {
+                    result *= i;
+                }
+                return result;
+            }
+
 
         }
     }
