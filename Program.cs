@@ -12,6 +12,20 @@ namespace Silnia
         {
             Console.WriteLine("Podaj liczbę");
             int n = Int32.Parse(Console.ReadLine());
+
+            //silnia iteracyjnie
+
+            int silnia1(int i)
+            {
+                if (i < 1)
+                    return 1;
+                else
+                    return i * silnia1(i - 1);
+
+            }
+
+            
+
         }
     }
 }
