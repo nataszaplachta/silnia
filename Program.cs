@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Silnia
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -24,7 +24,7 @@ namespace Silnia
 
             }
 
-            //silnia iteracyjnie
+            //silnia iteracyjnia
             int silnia2(int a)
             {
                 int result = 1;
@@ -34,6 +34,10 @@ namespace Silnia
                 }
                 return result;
             }
+
+            Console.WriteLine($"{n}! = {silnia1(n)}");
+            Console.WriteLine($"{n}! = {silnia2(n)}");
+            Console.ReadKey();
 
 
         }
