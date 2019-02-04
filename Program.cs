@@ -11,7 +11,10 @@ namespace Silnia
         static void Main(string[] args)
         {
             Console.WriteLine("Podaj liczbę");
-            int n = Int32.Parse(Console.ReadLine());
+            string b = Console.ReadLine();
+            decimal c;
+            var numCheck = decimal.TryParse(b, out c);
+                
 
             //silnia rekurencyjnie
 
@@ -34,10 +37,19 @@ namespace Silnia
                 }
                 return result;
             }
+            if (numCheck == true)
+            {
+                int n = Int32.Parse(b);
 
-            Console.WriteLine($"{n}! = {silnia1(n)}");
-            Console.WriteLine($"{n}! = {silnia2(n)}");
-            Console.ReadKey();
+                Console.WriteLine($"{n}! = {silnia1(n)}");
+                Console.WriteLine($"{n}! = {silnia2(n)}");
+                Console.ReadKey();
+            }
+            else
+            {
+                Console.WriteLine("To nie jest liczba");
+                Console.ReadKey();
+            }
 
 
         }
